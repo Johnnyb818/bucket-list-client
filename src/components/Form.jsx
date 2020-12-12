@@ -1,7 +1,9 @@
 import React from "react";
 import {useAppState} from "../AppState.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Form, Button, Container } from 'react-bootstrap'
 
-const Form = (props) => {
+const Form1 = (props) => {
   const {state, dispatch} = useAppState();
   const {token} = state
   const action = props.match.params.action
@@ -44,16 +46,18 @@ const Form = (props) => {
 
 
   return (
-      <div className="form">
-          <form onSubmit={handleSubmit}>
-              <input type="text" name="title" value={formData.title} onChange={handleChange}></input>
-              <input type="text" name="location" value={formData.location} onChange={handleChange}></input>
-              <input type="text" name="description" value={formData.description} onChange={handleChange}></input>
-              <input type="text" name="image" value={formData.image} onChange={handleChange}></input>
-              <input type="submit" value={action}/>
-          </form>
-      </div>
+      <Container>
+        <Form onSubmit={handleSubmit}>
+            <Form.Group>
+                <Form.Control className="form-line" type="text" name="title" placeholder="Bucket List Activity" value={formData.title} onChange={handleChange}/>
+                <Form.Control className="form-line" type="text" name="location" placeholder="Location" value={formData.location} onChange={handleChange}/>
+                <Form.Control className="form-line" type="text" name="description" placeholder="Description" value={formData.description} onChange={handleChange}/>
+                <Form.Control className="form-line" type="text" name="image" placeholder="Image" value={formData.image} onChange={handleChange}/>
+                <Button variant="info" type="submit">Add New Adventure</Button>
+            </Form.Group>
+        </Form>
+      </Container>
   );
 };
 
-export default Form;
+export default Form1;

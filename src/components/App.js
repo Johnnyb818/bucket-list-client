@@ -6,6 +6,7 @@ import Auth from "../pages/Auth.jsx"
 import Dashboard from "../pages/Dashboard.jsx"
 import { useAppState } from "../AppState.jsx";
 
+
 export const App = (props) => {
 
   const {state, dispatch} = useAppState()

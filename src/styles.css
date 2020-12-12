@@ -1,3 +1,8 @@
+* {
+  background-color: rgb(61, 70, 79);
+  color: burlywood;
+}
+
 /* ////////////////////////////
 //Nav Component Styling
 /////////////////////////// */
@@ -9,6 +14,8 @@ header {
 header nav {
   display: flex;
   justify-content: space-around;
+  text-decoration: none;
+  padding-bottom: 30px;
 }
 
 header nav a {
@@ -18,28 +25,30 @@ header nav a {
 
 header nav div {
   font-size: larger;
-  background-color: crimson;
+  background-color: teal;
   color: white;
   width: 200px;
   border-radius: 7px;
   transition: background-color .2s, color .2s;
   padding: 10px;
+  text-decoration: none;
 }
 
 header nav div:hover {
   background-color: burlywood;
-  color: crimson;
+  color: teal;
+  text-decoration: none;
 }
 
 
 /* ///////////////////////////////
 // Auth Component
 ////////////////////////////// */
-.auth form {
+ .auth form {
   padding: 50px;
 }
 
-.auth form input, .form form input, button {
+/* .auth form input, .form form input, button {
   background-color: crimson;
   color: white;
   padding: 8px;
@@ -48,7 +57,7 @@ header nav div:hover {
   margin: 10px auto;
   text-align: center;
   font-size: 1.2em;
-}
+}  */
 
 
 /* //////////////////////
@@ -59,9 +68,53 @@ header nav div:hover {
   text-align: center;
 }
 
-.dashboard .note {
+/* .dashboard .bucket {
   text-align: center;
   width: 90;
   margin: 10px auto;
   border: 3px solid crimson;
+} */
+
+
+/* ///////////////////
+//Home 
+///////////////// */
+
+.home-title {
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+/* //////////////
+//CARD 
+///////////// */
+
+.card-div {
+  height: 550px;
+  width: 350px;
+  margin-bottom: 30px;
+  box-shadow: -7px 8px 3px 2px rgba(213, 184, 18, 0.995);
+}
+
+
+
+
+
+.form-line {
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.auth-button {
+  margin-top: 20px;
+}
+
+.new-item-button {
+  margin-bottom: 20px;
+}
+
+
+.home-title-h2 {
+  margin-bottom: 150px;
 }

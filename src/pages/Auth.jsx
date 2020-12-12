@@ -1,5 +1,6 @@
 import React from "react"
 import {useAppState} from "../AppState.jsx"
+import { Form, Button, Container } from 'react-bootstrap'
 
 const Auth = (props) => {
     const type = props.match.params.form;
@@ -51,13 +52,18 @@ const Auth = (props) => {
       });
     };
 
-    return <div className="auth">
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="username" value={formData.username} onChange={handleChange}/>
-            <input type="password" name="password" value={formData.password} onChange={handleChange}/>
-            <input type="submit" value={type} />
-        </form>
-    </div>
+    return <Container className="auth">
+        <Form onSubmit={handleSubmit}>
+          <Form.Group>
+            <Form.Label>Username</Form.Label>
+            <Form.Control type="text" name="username" value={formData.username} onChange={handleChange}/>
+          </Form.Group>
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" name="password" value={formData.password} onChange={handleChange}/>
+            <Button className="auth-button" variant="info" type="submit">{type}</Button>
+        </Form>
+      </Container>
+    
 }
 
 export default Auth
