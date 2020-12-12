@@ -5,7 +5,7 @@ import React, { useContext, useReducer } from "react";
 //////////////////////////
 
 const initialState = {
-    url: "http://jb-bucket-list-api.herokuapp.com",
+    url: "https://jb-bucket-list-api.herokuapp.com",
     token: null,
     username: null,
     buckets: null,
